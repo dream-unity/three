@@ -3,7 +3,7 @@
 Repository: [dream-unity/three](https://github.com/dream-unity/three)  
 Intended address: https://dreamuniverse.one/
 
-This repository prepares a small static holding page for Dream Universe. It uses the parchment and ink palette of Dream Unity and links all three stages. The experience itself remains in preparation.
+Dream Universe’s founding website for a social digital universe of film, music and shared worlds in virtual reality. The original Dream Unity portal artwork and parchment-and-ink identity connect the three creative territories. Native portal links and expandable vision notes work without JavaScript. Creation tools, community and VR experiences remain in development.
 
 | Stage | Repository | Domain |
 | --- | --- | --- |
@@ -13,7 +13,7 @@ This repository prepares a small static holding page for Dream Universe. It uses
 
 ## Preparation and activation
 
-`index.html` is self-contained. `CNAME` contains only `dreamuniverse.one`; `.nojekyll` allows direct static publication. No install or build command is needed.
+`index.html`, `styles.css` and the original artwork in `assets/` form a static site with no external runtime dependencies. `CNAME` contains only `dreamuniverse.one`; `.nojekyll` allows direct static publication. No install or build command is needed.
 
 **Preparation is not activation.** Repository files do not establish that Pages settings, DNS or HTTPS are ready. This preparation has not changed those settings.
 
