@@ -3,7 +3,13 @@
 Repository: [dream-unity/three](https://github.com/dream-unity/three)  
 Intended address: https://dreamuniverse.one/
 
-Dream Universe’s founding website for a social digital universe of film, music and shared worlds in virtual reality. The original Dream Unity portal artwork and parchment-and-ink identity connect the three creative territories. Native portal links and expandable vision notes work without JavaScript. Creation tools, community and VR experiences remain in development.
+Dream Universe is a social world-discovery interface centred on exploring extraordinary virtual worlds together. The parchment, serif and architectural-ink identity is retained, with an original illustrated world atlas and an integrated gathering sidebar.
+
+Visitors can search and filter three original world concepts, save destinations on their device, open deep-linked world details, copy world links, and create, remove and copy personal gathering plans. Gathering times include a time zone. Search, collections and plans use vanilla JavaScript with no runtime dependencies. Clipboard failures provide selectable text; storage failures are disclosed. Personal data remains in the current browser.
+
+The worlds are clearly identified as concepts. Authentication, friend presence, messaging, multiplayer sessions and playable VR access are not implemented or simulated. Plans coordinate a conversation around a concept and do not claim to open a live VR room.
+
+`assets/world-atlas.webp` is original generated concept artwork: floating ancient cities, a botanical cathedral and an ocean observatory in fine sepia engraving on ivory parchment, with groups of travellers and restrained teal/gold colour. It was created with the built-in image-generation tool for this design.
 
 | Stage | Repository | Domain |
 | --- | --- | --- |
@@ -13,7 +19,7 @@ Dream Universe’s founding website for a social digital universe of film, music
 
 ## Preparation and activation
 
-`index.html`, `styles.css` and the original artwork in `assets/` form a static site with no external runtime dependencies. `CNAME` contains only `dreamuniverse.one`; `.nojekyll` allows direct static publication. No install or build command is needed.
+`index.html`, `styles.css`, `app.js` and the original artwork in `assets/` form a static site with no external runtime dependencies. `CNAME` contains only `dreamuniverse.one`; `.nojekyll` allows direct static publication. No install or build command is needed.
 
 **Preparation is not activation.** Repository files do not establish that Pages settings, DNS or HTTPS are ready. This preparation has not changed those settings.
 

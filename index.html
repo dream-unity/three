@@ -3,91 +3,96 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Dream Universe is taking shape: a social digital universe for making films, composing music, and creating worlds to explore together in virtual reality.">
+  <meta name="description" content="Discover extraordinary virtual worlds and imagine your next shared adventure. Dream Universe is a social home for exploring worlds together.">
   <meta name="theme-color" content="#ebe4d5">
   <link rel="canonical" href="https://dreamuniverse.one/">
-  <link rel="stylesheet" href="styles.css">
-  <meta property="og:title" content="Dream Universe — Make something others can enter.">
-  <meta property="og:description" content="Film. Music. Worlds. A social digital universe, taking shape.">
+  <link rel="stylesheet" href="styles.css?v=3">
+  <meta property="og:title" content="Dream Universe — Extraordinary worlds. Better together.">
+  <meta property="og:description" content="Find your world. Bring your people. A social universe for shared exploration.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dreamuniverse.one/">
-  <meta property="og:image" content="https://dreamuniverse.one/assets/dream-unity-portals-refined.webp">
-  <title>Dream Universe — A world of worlds</title>
+  <meta property="og:image" content="https://dreamuniverse.one/assets/world-atlas.webp">
+  <title>Dream Universe — Explore worlds together</title>
+  <script src="app.js?v=3" defer></script>
 </head>
-<body>
+<body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="wordmark" href="#top" aria-label="Dream Universe, back to top">Dream <span>Universe</span><sup>III</sup></a>
+    <a class="wordmark" href="#top" aria-label="Dream Universe home">Dream <em>Universe</em><sup>III</sup></a>
+    <div class="header-note">A WORLD OF WORLDS</div>
     <nav class="primary-nav" aria-label="Main navigation">
-      <a href="#portals">The portals</a>
-      <a href="#inhabit">The universe</a>
-      <a href="#together">Together <span aria-hidden="true">↗</span></a>
+      <a href="#discover" class="nav-active">Explore</a>
+      <a href="#gatherings">Gatherings</a>
+      <button class="button button-dark header-cta" type="button" data-plan-gathering>Bring your people <span aria-hidden="true">↗</span></button>
     </nav>
   </header>
 
-  <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="tiny-star" aria-hidden="true">✧</span> A world of worlds</p>
-        <h1 id="hero-title">Make something<br>others can <em>enter.</em></h1>
-        <p class="hero-description">A social digital universe for the worlds within us. Make films. Compose music. Build universes that people can explore together, in virtual reality.</p>
-        <a class="text-link hero-link" href="#portals">Discover the three portals <span aria-hidden="true">↗</span></a>
-        <p class="development-note"><span aria-hidden="true">◌</span> The universe is taking shape.</p>
+  <div class="app-layout">
+    <aside class="explore-nav" aria-label="World navigation">
+      <p class="eyebrow nav-heading">Your universe</p>
+      <button class="filter-button side-link is-active" data-filter="all" type="button" aria-pressed="true"><span class="nav-mark" aria-hidden="true">◎</span> Discover worlds</button>
+      <a class="side-link" href="#gatherings"><span class="nav-mark people-mark" aria-hidden="true">♧</span> Gatherings <span class="nav-count" id="gathering-count">0</span></a>
+      <button class="filter-button side-link" data-filter="saved" type="button" aria-pressed="false"><span class="nav-mark" aria-hidden="true">◇</span> Saved worlds <span class="nav-count" id="saved-count">0</span></button>
+      <div class="nav-divider"></div>
+      <p class="eyebrow nav-heading">Follow your curiosity</p>
+      <button class="filter-button side-link" data-filter="adventure" type="button" aria-pressed="false"><span class="small-orbit" aria-hidden="true"></span> Adventure</button>
+      <button class="filter-button side-link" data-filter="nature" type="button" aria-pressed="false"><span class="small-orbit orbit-green" aria-hidden="true"></span> Nature &amp; wonder</button>
+      <button class="filter-button side-link" data-filter="night" type="button" aria-pressed="false"><span class="small-orbit orbit-blue" aria-hidden="true"></span> After dark</button>
+      <div class="sidebar-note">
+        <img src="assets/dream-unity-portals-refined.webp" width="1254" height="1254" alt="" class="legacy-emblem">
+        <p>Many imaginations.<br><em>One shared universe.</em></p>
+        <a href="#dream-progression">The Dream journey <span aria-hidden="true">↗</span></a>
       </div>
-      <figure class="universe-map" aria-label="The original Dream emblem with three pathways: Film, Worlds, and Music">
-        <img class="portal-art" src="assets/dream-unity-portals-refined.webp" alt="" width="1254" height="1254" fetchpriority="high">
-        <a class="map-portal film-portal" href="#film"><span class="portal-number" aria-hidden="true">01</span><span class="portal-title">Film</span><span class="portal-action" aria-hidden="true">Discover ↗</span></a>
-        <a class="map-portal worlds-portal" href="#worlds"><span class="portal-number" aria-hidden="true">02</span><span class="portal-title">Worlds</span><span class="portal-action" aria-hidden="true">Explore ↗</span></a>
-        <a class="map-portal music-portal" href="#music"><span class="portal-number" aria-hidden="true">03</span><span class="portal-title">Music</span><span class="portal-action" aria-hidden="true">Discover ↗</span></a>
-        <figcaption><span>Fig. III</span> Imagination, made inhabitable.</figcaption>
-      </figure>
-      <div class="hero-bottom"><span>Conceived within. Created together.</span><a href="#portals" aria-label="Continue to the three portals">Scroll to discover <span aria-hidden="true">↓</span></a></div>
-    </section>
+    </aside>
 
-    <section class="portals-section content-width" id="portals" aria-labelledby="portals-title">
-      <div class="section-heading"><p class="eyebrow">I. The creative territories</p><h2 id="portals-title">Three portals.<br><em>Endless possible worlds.</em></h2><p>A film can become a world. A composition can give it a pulse. A world can bring people together.</p></div>
-      <div class="territory-list">
-        <article class="territory" id="film" aria-labelledby="film-title">
-          <span class="territory-number" aria-hidden="true">01</span>
-          <div class="territory-title"><p class="eyebrow">The moving image</p><h3 id="film-title">Film</h3></div>
-          <div class="territory-body"><p>Give an inner world a visible form. From a first scene to a universe of connected stories, this is the territory of cinema, animation and shared imagination.</p><details><summary>The vision for Film <span aria-hidden="true">+</span></summary><div class="field-notes"><p>A place to develop stories, bring collaborators into a production, and share the finished work. Characters, environments and music could carry a story beyond the screen into an explorable world.</p><p class="status-label">Film creation and publishing tools are in development.</p></div></details></div>
-        </article>
-        <article class="territory" id="worlds" aria-labelledby="worlds-title">
-          <span class="territory-number" aria-hidden="true">02</span>
-          <div class="territory-title"><p class="eyebrow">Beyond the screen</p><h3 id="worlds-title">Worlds <span class="ampersand">&amp; VR</span></h3></div>
-          <div class="territory-body"><p>Create somewhere to be. Imagine its landscapes, its architecture, its inhabitants and its rules. Build a universe that other people can step inside.</p><details><summary>The vision for Worlds <span aria-hidden="true">+</span></summary><div class="field-notes"><p>Connected spaces for exploration, social experiences and collaborative worldbuilding. The ambition is to make creations inhabitable through immersive virtual reality, with ways to encounter them on the web too.</p><p class="status-label">Worldbuilding, traversal and VR experiences are in development.</p></div></details></div>
-        </article>
-        <article class="territory" id="music" aria-labelledby="music-title">
-          <span class="territory-number" aria-hidden="true">03</span>
-          <div class="territory-title"><p class="eyebrow">The audible imagination</p><h3 id="music-title">Music</h3></div>
-          <div class="territory-body"><p>Give a feeling its own atmosphere. Make songs, scores and soundscapes that stand alone—or become the living sound of a film, a gathering or a universe.</p><details><summary>The vision for Music <span aria-hidden="true">+</span></summary><div class="field-notes"><p>A creative home for composing, collaborating and sharing sound. Music can become part of a larger world: a score for its stories, an atmosphere for its places, a reason for its people to gather.</p><p class="status-label">Music creation, collaboration and listening tools are in development.</p></div></details></div>
-        </article>
+    <main id="main">
+      <section class="welcome" aria-labelledby="welcome-title">
+        <div><p class="eyebrow">A social universe for virtual reality</p><h1 id="welcome-title">Extraordinary worlds.<br><em>Better together.</em></h1></div>
+        <p class="welcome-description">Find somewhere you’ve never imagined.<br>Bring someone you’ll never forget it with.</p>
+      </section>
+
+      <div class="discovery-layout">
+        <div class="worlds-column">
+          <section class="featured-world" aria-labelledby="featured-title">
+            <div class="featured-art" role="img" aria-label="An engraved imagined universe of floating cities, cathedral forests and a celestial observatory"></div>
+            <div class="featured-topline"><span class="paper-label">The founding collection</span><span class="feature-coordinate">FIELD NOTES / 001</span></div>
+            <div class="featured-content"><p class="eyebrow">Beyond the edge of the possible</p><h2 id="featured-title">Somewhere worth<br><em>getting lost together.</em></h2><p>Floating cities. Living forests. Skies that don’t end.<br>Your next shared adventure starts with a world.</p><button class="button button-dark" type="button" data-open-world="aether">Discover the Aether Isles <span aria-hidden="true">↗</span></button></div>
+            <div class="feature-caption"><span class="caption-ring" aria-hidden="true">◎</span><span>Dream Universe originals</span><span>World concepts</span></div>
+          </section>
+
+          <section class="world-directory" id="discover" aria-labelledby="discover-title">
+            <div class="section-title-row"><div><p class="eyebrow">Choose your next horizon</p><h2 id="discover-title">Where shall we go?</h2></div><span class="collection-note">The first three worlds</span></div>
+            <div class="discovery-controls"><label class="search-box"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m15.5 15.5 5 5"></path></svg><span class="sr-only">Search worlds</span><input id="world-search" type="search" placeholder="Find a world, a feeling, an adventure…" autocomplete="off"></label></div>
+            <div class="filter-row" aria-label="Filter worlds"><button class="filter-button chip is-active" data-filter="all" type="button" aria-pressed="true">All worlds</button><button class="filter-button chip" data-filter="adventure" type="button" aria-pressed="false">Adventure</button><button class="filter-button chip" data-filter="nature" type="button" aria-pressed="false">Nature &amp; wonder</button><button class="filter-button chip" data-filter="night" type="button" aria-pressed="false">After dark</button><button class="filter-button chip" data-filter="saved" type="button" aria-pressed="false">Saved</button><span id="result-count" role="status">3 worlds</span></div>
+            <div class="world-grid" id="world-grid"></div>
+            <div id="empty-state" class="empty-state" hidden><h3>No worlds found here yet.</h3><p>Try a different search or choose All worlds.</p><button type="button" class="button" id="reset-search">Show all worlds</button></div>
+            <noscript><p class="noscript-note">Enable JavaScript to browse the world collection, save destinations and plan a gathering. Dream Universe’s shared VR experiences are in development.</p></noscript>
+            <p class="availability-note">An invitation to what comes next. These are original world concepts; shared VR access is in development.</p>
+          </section>
+        </div>
+
+        <aside class="social-column" aria-label="Explore together">
+          <section class="together-panel" aria-labelledby="together-title">
+            <p class="eyebrow">The best part is who you find</p>
+            <div class="circle-illustration" aria-hidden="true"><span class="friend-circle you">You</span><span class="friend-circle friend-one">+</span><span class="friend-circle friend-two">+</span><span class="friend-circle friend-three">+</span><i class="circle-orbit"></i></div>
+            <h2 id="together-title">A place for<br><em>your people.</em></h2>
+            <p>Some worlds are too extraordinary to keep to yourself. Choose a destination. Gather your circle. Imagine what you’ll discover.</p>
+            <button class="button button-dark" type="button" data-plan-gathering>Plan a gathering <span aria-hidden="true">↗</span></button>
+            <p class="small-note">Make a plan to share with friends.</p>
+          </section>
+          <section class="gatherings-panel" id="gatherings" aria-labelledby="gatherings-title"><div class="aside-title"><h2 id="gatherings-title">Your gatherings</h2><span class="eyebrow">Personal</span></div><div id="gathering-list"><div class="empty-gathering"><span class="empty-orbit" aria-hidden="true">◌</span><p>Your next adventure<br>starts with an invitation.</p><button class="text-button" type="button" data-plan-gathering>Make your first plan <span aria-hidden="true">↗</span></button></div></div><p class="small-note">Your plans are saved on this device.</p></section>
+          <section class="field-note"><p class="eyebrow">A different kind of social</p><p>Don’t just share<br>what you’re doing.<br><em>Share where you are.</em></p><span class="ink-rule" aria-hidden="true"></span><p class="field-note-small">A universe made for presence, possibility, and the people beside you.</p></section>
+        </aside>
       </div>
-    </section>
 
-    <section class="inhabit-section" id="inhabit" aria-labelledby="inhabit-title">
-      <div class="content-width inhabit-inner">
-        <div class="orbit-illustration" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><div class="orbit-axis axis-one"></div><div class="orbit-axis axis-two"></div><span class="orbit-center">oOo</span><span class="orbit-point point-one"></span><span class="orbit-point point-two"></span><span class="orbit-point point-three"></span><span class="orbit-label label-one">An idea</span><span class="orbit-label label-two">A creation</span><span class="orbit-label label-three">A shared world</span></div>
-        <div class="inhabit-copy"><p class="eyebrow">II. From imagination to encounter</p><h2 id="inhabit-title">A universe becomes real<br>when someone else<br><em>finds a place in it.</em></h2><p>Dream Universe is being built around a simple possibility: what begins in one person’s imagination can become somewhere we meet.</p><p>A film opens a door. Music changes the atmosphere. A virtual world gives us a place to explore, create and belong.</p></div>
-      </div>
-    </section>
+      <section class="shared-experiences" aria-labelledby="experiences-title"><div class="section-title-row"><div><p class="eyebrow">More than places. Possibilities.</p><h2 id="experiences-title">Find your way to be together.</h2></div></div><div class="experience-grid"><button class="experience" type="button" data-plan-gathering data-world="aether"><span class="experience-number">01 / WANDER</span><h3>Take the unknown path.</h3><p>Get wonderfully lost with your favourite people.</p><span class="experience-link">Plan an adventure ↗</span></button><button class="experience" type="button" data-plan-gathering data-world="verdant"><span class="experience-number">02 / CONNECT</span><h3>Stay a little longer.</h3><p>Find a quiet corner for a conversation that matters.</p><span class="experience-link">Find a meeting place ↗</span></button><button class="experience" type="button" data-plan-gathering data-world="observatory"><span class="experience-number">03 / EXPERIENCE</span><h3>Make a night of it.</h3><p>Imagine music, films and stories in extraordinary spaces.</p><span class="experience-link">Dream up a gathering ↗</span></button></div></section>
 
-    <section class="together-section content-width" id="together" aria-labelledby="together-title">
-      <div class="together-heading"><p class="eyebrow">III. The social universe</p><h2 id="together-title">Your imagination.<br><em>Our meeting place.</em></h2></div>
-      <div class="together-copy"><p class="large-copy">Create with people who see what you see.<br>Meet people who see what you haven’t.</p><p>The vision is a connected creative community: filmmakers finding composers, worldbuilders finding collaborators, and people discovering universes they want to be part of.</p><p class="status-label">Community spaces, creator profiles and collaboration features are in development. This site introduces the vision.</p><a class="text-link" href="https://dreamuniversity.one/">Begin with Dream University <span aria-hidden="true">↗</span></a></div>
-    </section>
-
-    <section class="progression content-width" aria-labelledby="progression-title">
-      <div class="progression-heading"><p class="eyebrow" id="progression-title">One dream. Three horizons.</p><p>Develop within. Learn to create. Bring worlds to life.</p></div>
-      <nav class="progression-nav" aria-label="Dream progression">
-        <a href="https://dreamunity.one/"><span class="stage-number">I</span><strong>Dream Unity</strong><span class="stage-description">Cultivate your foundations</span></a>
-        <span class="stage-arrow" aria-hidden="true">→</span>
-        <a href="https://dreamuniversity.one/"><span class="stage-number">II</span><strong>Dream University</strong><span class="stage-description">Deepen your understanding</span></a>
-        <span class="stage-arrow" aria-hidden="true">→</span>
-        <a href="https://dreamuniverse.one/" aria-current="page"><span class="stage-number">III</span><strong>Dream Universe</strong><span class="stage-description">Create worlds together</span></a>
-      </nav>
-    </section>
-  </main>
-  <footer class="site-footer content-width"><a href="#top">Dream Universe</a><p>A world of worlds, in the making.</p><a href="#top" aria-label="Back to top">Back to the beginning <span aria-hidden="true">↑</span></a></footer>
+      <section class="progression" id="dream-progression" aria-labelledby="progression-title"><p class="eyebrow" id="progression-title">One dream. Three horizons.</p><nav class="progression-nav" aria-label="Dream progression"><a href="https://dreamunity.one/"><span class="stage-number">I</span><strong>Dream Unity</strong><span>Discover your foundations</span></a><span class="stage-arrow" aria-hidden="true">→</span><a href="https://dreamuniversity.one/"><span class="stage-number">II</span><strong>Dream University</strong><span>Learn to create worlds</span></a><span class="stage-arrow" aria-hidden="true">→</span><a href="https://dreamuniverse.one/" aria-current="page"><span class="stage-number">III</span><strong>Dream Universe</strong><span>Explore them together</span></a></nav></section>
+      <footer class="site-footer"><a href="#top">Dream <em>Universe</em></a><p>A world of worlds. A place for us.</p><a href="#top">Back to the beginning ↑</a></footer>
+    </main>
+  </div>
+  <dialog id="world-dialog" class="world-dialog" aria-label="World details"><button type="button" class="dialog-close" data-close-dialog aria-label="Close world details">×</button><div class="dialog-body" id="world-detail"></div></dialog>
+  <dialog id="plan-dialog" class="plan-dialog" aria-labelledby="plan-title"><button type="button" class="dialog-close" data-close-dialog aria-label="Close gathering planner">×</button><div class="dialog-body"><p class="eyebrow">Good company. Extraordinary places.</p><h2 id="plan-title">Bring your people.</h2><p class="dialog-intro">Plan a time to explore a world concept together. Save it here and share the details with your circle.</p><form id="plan-form"><label>Choose your world<select id="plan-world" required><option value="aether">The Aether Isles</option><option value="verdant">The Verdant Cathedral</option><option value="observatory">The Midnight Observatory</option></select></label><label>Give your gathering a name<input id="plan-name" type="text" required maxlength="70" placeholder="Our next great adventure"></label><label>When shall we meet?<input id="plan-date" type="datetime-local" required></label><label>A note for your people <span class="optional">(optional)</span><textarea id="plan-note" maxlength="400" rows="3" placeholder="What would you love to discover together?"></textarea></label><p class="small-note">Times use your device’s time zone. This saves a personal plan; shared VR rooms are not open yet.</p><p id="plan-feedback" role="status"></p><button class="button button-dark" type="submit">Save gathering <span aria-hidden="true">↗</span></button></form></div></dialog>
+  <div class="toast" id="toast" role="status"></div>
 </body>
 </html>
