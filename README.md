@@ -1,44 +1,43 @@
 # Dream Universe
 
-Repository: [dream-unity/three](https://github.com/dream-unity/three)  
-Intended address: https://dreamuniverse.one/
+Dream Universe is the third stage of the Dream family: a social destination for exploring extraordinary virtual worlds together. This GitHub Pages site is a working discovery interface and concept-world preview, not a deployed multiplayer or VR engine.
 
-Dream Universe’s founding website for a social digital universe of film, music and shared worlds in virtual reality. The original Dream Unity portal artwork and parchment-and-ink identity connect the three creative territories. Native portal links and expandable vision notes work without JavaScript. Creation tools, community and VR experiences remain in development.
+## What works
 
-| Stage | Repository | Domain |
-| --- | --- | --- |
-| Dream Unity | `dream-unity/one` | `dreamunity.one` |
-| Dream University | `dream-unity/two` | `dreamuniversity.one` |
-| Dream Universe | `dream-unity/three` | `dreamuniverse.one` |
+- Search six imagined destinations by name, category, atmosphere, and description.
+- Filter by Wonder, Nature, Music, and Stories.
+- Open illustrated world previews and pan across the scene artwork with a keyboard-accessible control.
+- Save and unsave favourite worlds. Preferences stay in this browser using local storage; a restricted browser falls back to memory for the visit.
+- Plan a multi-world journey, select destinations, and copy a shareable invitation URL. Visitors to the URL see the same itinerary and previews.
+- Open world deep links, use browser Back, and close native dialogs with Escape.
 
-## Preparation and activation
+Shared routes are invitations to explore concept previews. They do not create live rooms, accounts, messages, multiplayer presence, VR sessions, or reservations. No live-user counts or fictional community activity are presented. Film and music are experiences within the social universe rather than the primary navigation.
 
-`index.html`, `styles.css` and the original artwork in `assets/` form a static site with no external runtime dependencies. `CNAME` contains only `dreamuniverse.one`; `.nojekyll` allows direct static publication. No install or build command is needed.
+## Source
 
-**Preparation is not activation.** Repository files do not establish that Pages settings, DNS or HTTPS are ready. This preparation has not changed those settings.
+- `index.html`: responsive social-platform shell, world directory, community planning, and original Dream branding.
+- `styles.css`: parchment-and-ink application layout.
+- `app.js`: dependency-free discovery, browser-local favourites, world dialogs, and itinerary links.
+- `interactions.css`: world preview and journey planner styling.
+- `CNAME`: `dreamuniverse.one`.
+- `.nojekyll`: direct static serving.
 
-1. In [account Pages settings](https://github.com/settings/pages), verify ownership using GitHub's generated TXT challenge for this domain. Keep that record after verification.
-2. Open [this repository's Pages settings](https://github.com/dream-unity/three/settings/pages). Choose **Deploy from a branch**, **main**, **/(root)** and save. Set **Custom domain** to **dreamuniverse.one** and save it before changing web-routing DNS.
-3. In Namecheap, open **Domain List → Manage → Advanced DNS** for **dreamuniverse.one**. Replace the parking/redirect entries for `@` and `www` with the records below, using Automatic TTL. Preserve unrelated records and existing nameservers.
+The original `assets/dream-unity-portals-refined.webp` and `assets/parchment-texture.svg` remain unchanged. Dream Unity and Dream University continue to be linked in the progression navigation, including on mobile.
 
-| Type | Host | Value |
-| --- | --- | --- |
-| A | `@` | `185.199.108.153` |
-| A | `@` | `185.199.109.153` |
-| A | `@` | `185.199.110.153` |
-| A | `@` | `185.199.111.153` |
-| CNAME | `www` | `dream-unity.github.io` |
+## Artwork provenance
 
-The `www` target is the account hostname, without `/three`. Keep the existing IPv4-only configuration, matching Dream Unity.
+Created with the built-in imagegen tool for this website; WebP conversion only, no crops or colour alterations. All three are 1672 × 941 pixels. They depict imagined environments, not existing playable worlds.
 
-4. Confirm the Pages deployment succeeds and the domain DNS check passes. Enable **Enforce HTTPS** when the certificate is ready; issuance and DNS propagation can take up to 24 hours.
-5. Check HTTP and HTTPS for both apex and `www`: each must reach `https://dreamuniverse.one/` with the Dream Universe page and a valid certificate. Check all three navigation destinations after both new sites are activated.
+| Asset | Prompt direction |
+|---|---|
+| `assets/world-threshold.webp` | Three travellers exploring together through an immense celestial ring arch toward floating terraced garden cities and luminous rivers of mist. |
+| `assets/world-observatory.webp` | Shared exploration of an ivory-stone observatory above clouds, enormous engraved bronze orbital rings and a moonlit celestial sky. |
+| `assets/world-wilds.webp` | Three friends overlooking a vast botanical canyon, circular ruins, hanging gardens and a waterfall pouring through a monumental ring. |
 
-Before activation, public DNS on 9 October 2026 showed `@` → `162.255.119.137` and `www` → `parkingpage.namecheap.com`. Inspect the current Namecheap zone before editing; public DNS does not expose Namecheap's internal redirect-rule type.
+Shared art direction: dimensional cinematic concept realism, intricate engraved details, restrained parchment ivory, charcoal, antique gold, and muted olive. No text, interface, watermarks, or modern headset closeups. The additional Tidal Sanctuary, Resonance Hall, and Storykeepers' Theatre concepts reuse the closest scene illustrations as clearly labelled previews.
 
-## Official setup references
+## Deployment
 
-- [GitHub publication source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
-- [GitHub custom domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
-- [GitHub ownership verification](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages)
-- [Namecheap GitHub Pages setup](https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages/)
+GitHub Pages publishes `main` from `/(root)` at https://dreamuniverse.one/. Keep the root `CNAME` file in future changes. This redesign does not alter DNS, email, or GitHub Pages configuration.
+
+The website uses no build process, external JavaScript dependencies, analytics, or third-party font requests. Local-storage key: `dream-universe-explorer-v1`. Invitation URLs contain only the selected public world identifiers; no personal profile data is sent.
